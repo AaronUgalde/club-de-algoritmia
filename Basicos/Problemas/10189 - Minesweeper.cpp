@@ -3,7 +3,12 @@ using namespace std;
 int main(){
     int n, m; cin >> n >> m;
     int field = 1;
+    bool first = true;
     do{
+        if(!first){
+            cout << endl;
+        }
+        first = false;
         char mines[n][m];
         for(int i=0; i<n; i++){
             for(int j=0; j<m; j++){
@@ -54,7 +59,6 @@ int main(){
             }
             cout << endl;
         }
-        cout << endl;
         cin >> n >> m;
     }while(n!=0&&m!=0);
 }
